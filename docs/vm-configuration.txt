@@ -1,0 +1,9 @@
+VMware Workstation
+-> Open the Ubuntu VM
+-> Edit virtual machine settings
+-> Processors = 4
+-> Memory = 8 GB
+-> Hard Disk = 60 GB
+-> Network Adapter = NAT or Bridged
+-> Apply / Save
+-> Power on the VM
