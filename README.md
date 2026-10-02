@@ -366,15 +366,15 @@ Analysis scripts: `scripts/analyze_results.py`, `scripts/generate_plots.py` · N
 | Metric | VM | Container | Difference |
 |--------|----|-----------|------------|
 | CPU Performance | 15.1 s | 14.9 s | +0.8% (Container faster) |
-| Memory Usage | 28332.62 MiB/sec | 9414.91 MiB/sec | `<calculated %>` |
-| Sequential Read |1360 MB/s | 1294 MB/s | `<calculated %>` |
-| Sequential Write | 495MB/s | 615MB/s | `<calculated %>` |
-| Random Read | 24.5MB/s | 24.8MB/s | `<calculated %>` |
-| Random Write | 23.3MB/s | 20.0MB/s | `<calculated %>` |
-| Network Throughput | 187Gbps | 139 Gbps | `<calculated %>` |
+| Memory Usage | 28332.62 MiB/sec | 9414.91 MiB/sec | -66.8% (VM faster) |
+| Sequential Read |1360 MB/s | 1294 MB/s | -4.9% (VM faster) |
+| Sequential Write | 495MB/s | 615MB/s | +24.2% (Container faster) |
+| Random Read | 24.5MB/s | 24.8MB/s | +1.2% (Container faster) |
+| Random Write | 23.3MB/s | 20.0MB/s | -14.2% (VM faster) |
+| Network Throughput | 187Gbps | 139 Gbps | -25.7% (VM faster) |
 | Startup Time | 21.47 s | 1.67 s | Container is ~92.2% faster |
-| API Requests/sec | 2246.67 | 3062.27 | `<calculated %>` |
-| API Latency | 44.510 | 32.656 | `<calculated %>` |
+| API Requests/sec | 2246.67 | 3062.27 | +36.3% (Container faster) |
+| API Latency | 44.510 | 32.656 | +26.6% (Container faster / lower latency) |
 
 ---
 
