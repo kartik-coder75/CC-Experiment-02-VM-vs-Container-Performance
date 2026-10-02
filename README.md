@@ -245,7 +245,7 @@ Raw data: `results/raw/disk/`
 | Duration | 30 s |
 | Streams | 1 and 4 (`-P 4`) |
 | Metrics | Throughput, retransmissions |
-| Network mode | `<NAT / Bridged / host / bridge>` |
+| Network mode | NAT |
 
 ```bash
 # Server
@@ -321,10 +321,10 @@ Throughput, latency, CPU usage, and memory usage are recorded at each workload l
 
 | Threads | VM (events/s) | Container (events/s) |
 |---------|---------------|----------------------|
-| 1 | `<value>` | `<value>` |
-| 2 | `<value>` | `<value>` |
-| 4 | `<value>` | `<value>` |
-| 8 | `<value>` | `<value>` |
+| 1 | 7450 | 7520 |
+| 2 | 14920 | 15040 |
+| 4 | 3204.70 | 3372.40 |
+| 8 | 3244.24 | 2856.71 |
 
 ![CPU performance](results/figures/cpu_performance.png)
 ![CPU scalability](results/figures/cpu_scalability.png)
