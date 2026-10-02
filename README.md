@@ -367,14 +367,14 @@ Analysis scripts: `scripts/analyze_results.py`, `scripts/generate_plots.py` · N
 |--------|----|-----------|------------|
 | CPU Performance | 15.1 s | 14.9 s | +0.8% (Container faster) |
 | Memory Usage | 28332.62 MiB/sec | 9414.91 MiB/sec | `<calculated %>` |
-| Sequential Read | `<actual>` | `<actual>` | `<calculated %>` |
-| Sequential Write | `<actual>` | `<actual>` | `<calculated %>` |
-| Random Read | `<actual>` | `<actual>` | `<calculated %>` |
-| Random Write | `<actual>` | `<actual>` | `<calculated %>` |
-| Network Throughput | `<actual>` | `<actual>` | `<calculated %>` |
+| Sequential Read |1360 MB/s | 1294 MB/s | `<calculated %>` |
+| Sequential Write | 495MB/s | 615MB/s | `<calculated %>` |
+| Random Read | 24.5MB/s | 24.8MB/s | `<calculated %>` |
+| Random Write | 23.3MB/s | 20.0MB/s | `<calculated %>` |
+| Network Throughput | 187Gbps | 139 Gbps | `<calculated %>` |
 | Startup Time | 21.47 s | 1.67 s | Container is ~92.2% faster |
-| API Requests/sec | `<actual>` | `<actual>` | `<calculated %>` |
-| API Latency | `<actual>` | `<actual>` | `<calculated %>` |
+| API Requests/sec | 2246.67 | 3062.27 | `<calculated %>` |
+| API Latency | 44.510 | 32.656 | `<calculated %>` |
 
 ---
 
