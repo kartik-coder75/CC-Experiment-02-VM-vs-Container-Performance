@@ -64,7 +64,7 @@ This project experimentally compares a Virtual Machine environment (Ubuntu guest
 
 | Item | Value |
 |------|-------|
-| CPU model | `<fill from docs/cpu-info.txt>` |
+| CPU model | `12th Gen Intel(R) Core(TM) i5-12500H` |
 | Physical cores / threads | `<fill>` |
 | RAM | `<fill>` |
 | Storage type (SSD/HDD/NVMe) | `<fill>` |
