@@ -74,21 +74,21 @@ This project experimentally compares a Virtual Machine environment (Ubuntu guest
 
 | Item | Value |
 |------|-------|
-| vCPU | `<e.g., 4>` |
-| Memory | `<e.g., 8 GB>` |
-| Virtual disk | `<e.g., 60 GB>` |
-| Guest OS | Ubuntu `<e.g., 24.04 LTS>` |
-| Network adapter | `<NAT or Bridged>` |
+| vCPU | 4 |
+| Memory | 8 GB |
+| Virtual disk | 100GB |
+| Guest OS | Ubuntu 24.04.5.1-desktop amd64 |
+| Network adapter | NAT |
 
 ### Container configuration (controlled limits)
 
 | Item | Value |
 |------|-------|
-| CPU limit | `<e.g., --cpus=4>` |
-| Memory limit | `<e.g., --memory=8g>` |
-| Base image | `ubuntu:24.04` |
-| Storage | `<host directory / Docker volume used>` |
-| Network mode | `<bridge / host>` |
+| CPU limit | --cpus=4 |
+| Memory limit | --memory=8g |
+| Base image | ubuntu:24.04.5.1 |
+| Storage | host directory |
+| Network mode | bridge |
 
 Raw system information is stored in `docs/cpu-info.txt`, `docs/memory-info.txt`, `docs/storage-info.txt`, `docs/kernel-info.txt`, and `docs/vm-configuration.txt`.
 
@@ -98,16 +98,16 @@ Raw system information is stored in `docs/cpu-info.txt`, `docs/memory-info.txt`,
 
 | Software | Purpose | Version |
 |----------|---------|---------|
-| Ubuntu | Guest OS / container base | `<fill>` |
-| VMware Workstation | Hypervisor | `<fill>` |
-| Docker | Container runtime | `<docker --version>` |
-| Sysbench | CPU and memory benchmark | `<sysbench --version>` |
-| fio | Disk I/O benchmark | `<fio --version>` |
-| iperf3 | Network benchmark | `<iperf3 --version>` |
-| Python | Analysis and API | `<python3 --version>` |
-| FastAPI / Uvicorn | Application workload | `<pip show fastapi uvicorn>` |
-| Apache Benchmark (ab) / wrk | HTTP load testing | `<fill>` |
-| Pandas / Matplotlib / NumPy | Result analysis | `<fill>` |
+| Ubuntu | Guest OS / container base | Ubuntu 24.04.5.1-desktop amd64 |
+| VMware Workstation | Hypervisor | 17.6.4 |
+| Docker | Container runtime | docker 29.1.3 |
+| Sysbench | CPU and memory benchmark | sysbench 1.0.20 |
+| fio | Disk I/O benchmark | fio-3.36 |
+| iperf3 | Network benchmark | iperf3 3.16 |
+| Python | Analysis and API | python 3.12.3  |
+| FastAPI / Uvicorn | Application workload | FastAPI 0.141.1 / Uvicorn 0.54.0 |
+| Apache Benchmark (ab) / wrk | HTTP load testing | ApacheBench, Version 2.3  |
+| Pandas / Matplotlib / NumPy | Result analysis | pandas 2.1.4 / matplotlib 3.6.3 / numpy 1.26.4 |
 
 ---
 
@@ -356,8 +356,8 @@ Analysis scripts: `scripts/analyze_results.py`, `scripts/generate_plots.py` · N
 
 | Environment | Mean | Median | Min | Max | Std |
 |-------------|------|--------|-----|-----|-----|
-| VM | `<value>` | `<value>` | `<value>` | `<value>` | `<value>` |
-| Container | `<value>` | `<value>` | `<value>` | `<value>` | `<value>` |
+| VM | 11280.0 | 11280.0 | 7520 | 15040 | 5317.442995 |
+| Container | 11185.0 | 11185.0 | 7450 | 14920 | 5282.087655 |
 
 ---
 
@@ -365,7 +365,7 @@ Analysis scripts: `scripts/analyze_results.py`, `scripts/generate_plots.py` · N
 
 | Metric | VM | Container | Difference |
 |--------|----|-----------|------------|
-| CPU Performance | `<actual>` | `<actual>` | `<calculated %>` |
+| CPU Performance | 15.1 s | 14.9 s | +0.8% (Container faster) |
 | Memory Usage | `<actual>` | `<actual>` | `<calculated %>` |
 | Sequential Read | `<actual>` | `<actual>` | `<calculated %>` |
 | Sequential Write | `<actual>` | `<actual>` | `<calculated %>` |
