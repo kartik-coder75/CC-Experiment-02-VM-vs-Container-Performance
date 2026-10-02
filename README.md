@@ -366,13 +366,13 @@ Analysis scripts: `scripts/analyze_results.py`, `scripts/generate_plots.py` · N
 | Metric | VM | Container | Difference |
 |--------|----|-----------|------------|
 | CPU Performance | 15.1 s | 14.9 s | +0.8% (Container faster) |
-| Memory Usage | `<actual>` | `<actual>` | `<calculated %>` |
+| Memory Usage | 28332.62 MiB/sec | 9414.91 MiB/sec | `<calculated %>` |
 | Sequential Read | `<actual>` | `<actual>` | `<calculated %>` |
 | Sequential Write | `<actual>` | `<actual>` | `<calculated %>` |
 | Random Read | `<actual>` | `<actual>` | `<calculated %>` |
 | Random Write | `<actual>` | `<actual>` | `<calculated %>` |
 | Network Throughput | `<actual>` | `<actual>` | `<calculated %>` |
-| Startup Time | `<actual>` | `<actual>` | `<calculated %>` |
+| Startup Time | 21.47 s | 1.67 s | Container is ~92.2% faster |
 | API Requests/sec | `<actual>` | `<actual>` | `<calculated %>` |
 | API Latency | `<actual>` | `<actual>` | `<calculated %>` |
 
