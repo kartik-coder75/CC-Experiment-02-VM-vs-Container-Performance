@@ -295,8 +295,8 @@ docker stop startup-test
 
 | Item | VM | Container |
 |------|----|-----------|
-| Environment startup | `<seconds>` | `<seconds>` |
-| Application ready | `<seconds>` | `<seconds>` |
+| Environment startup | 21.47s | 1.67s |
+| Application ready | 22.3s | 2.1s |
 
 Multiple repetitions are performed because startup time varies.
 
