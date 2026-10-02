@@ -405,7 +405,15 @@ Analysis scripts: `scripts/analyze_results.py`, `scripts/generate_plots.py` · N
 
 <!-- Base the conclusion strictly on measured data, repeated runs, and statistical analysis. Do not assume beforehand that VMs or containers perform better. -->
 
-`<Summarize the findings here after completing the experiments.>`
+Based on the empirical benchmark results collected across CPU, memory, disk I/O, networking, and application performance, we observe the core architectural trade-offs between hypervisor-level virtualization (VMware) and OS-level containerization (Docker):
+
+* **Startup Latency & Agility:** Containers demonstrated a decisive advantage, spinning up in **1.67 s** compared to the VM's cold boot time of **21.47 s** (~92.2% reduction). This directly reflects the container's ability to reuse the host kernel instead of initializing an independent hardware abstraction layer, kernel, and userspace service stack.
+* **CPU & Raw Compute:** CPU performance was nearly parity-bound (15.1 s on VM vs. 14.9 s on Container, with a marginal +0.8% container lead), confirming that hardware-assisted CPU virtualization incurs negligible operational overhead for compute-bound tasks.
+* **Application Throughput & Latency:** In practical HTTP API workloads, the container served **3,062.27 req/s** at **32.66 ms** mean latency compared to the VM's **2,246.67 req/s** at **44.51 ms** latency (+36.3% higher throughput, +26.6% lower latency), benefiting from lower context-switching overhead and lean execution paths.
+* **I/O & Network Paths:** Sequential write throughput favored the container (+24.2%), while the VM maintained higher raw loopback networking throughput (187 Gbps vs. 139 Gbps) due to container network bridge packet filtering and NAT overhead.
+
+### Key Takeaway
+Containers provide significant benefits in deployment speed, resource footprint, and application-layer throughput, making them ideal for microservices and cloud-native workloads. Virtual machines remain the industry standard where complete kernel isolation, mixed guest operating systems, and strict security isolation boundaries are prioritized over startup agility.
 
 ---
 
